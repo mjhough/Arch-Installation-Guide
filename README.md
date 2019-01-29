@@ -13,11 +13,12 @@ ls /sys/firmware/efi/efivars
 sudo pacman -S vim
 ```
 4. Setup the drive(s)
+    <br>
     i. List all drives and their corresponding partitions. Take note of the drive you wish to partition.
     ```
     lsblk
     ```
-   ii. Open the partition utility for the particular device. If you are wanting to partition the whole device just provide the device as the argument to `cgdisk`. For example, run `cgdisk /dev/sda` instead of `cgdisk /dev/sda1`.
+    ii. Open the partition utility for the particular device. If you are wanting to partition the whole device just provide the device as the argument to `cgdisk`. For example, run `cgdisk /dev/sda` instead of `cgdisk /dev/sda1`.
     ```
     cgdisk <device-name>
     ```

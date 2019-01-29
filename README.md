@@ -28,6 +28,7 @@ sudo pacman -S vim
     |Boot | 512M  | ef00|
     |LVM|remaining|8e00|
     If you wish to use additional hard drives in your system you should follow the same steps for them too. However, you will not need a boot partition. Just fill the whole thing with one LVM partition.
+    <br>
     iv. We can make the boot filesystem now. Run the below to do so.
     ```
     mkfs.fat -F32 <boot-partition-name>

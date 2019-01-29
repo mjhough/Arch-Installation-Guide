@@ -61,6 +61,7 @@ sudo pacman -S vim
     lvcreate -l 100%FREE <vg-name> -n home
     ```
     For any other drives, you can do the same thing. You won't need a swap and root partition. Keep it as one big logical volume, or split it up into multiple.
+    <br>
     x. Make the file systems for each logical volume and set up the swap volume.
     ```
     mkfs.ext4 /dev/mapper/<vg-name>-root
@@ -69,6 +70,7 @@ sudo pacman -S vim
     swapon /dev/mapper/<vg-name>-swap
     ```
     For addiitonal data drives, it's usually best to use ext4. Follow the same structure for the root and home volumes. You can verify the swap was setup correctly by checking that there exists swap memory when running `free -m`.
+    <br>
     xi. Now we must mount the logical volumes.
     ```
     mkdir /mnt/boot/

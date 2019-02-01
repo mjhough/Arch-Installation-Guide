@@ -195,15 +195,19 @@ initrd  /intel-ucode.img
 initrd  /initramfs-linux.img
 options cryptdevice=UUID=<lvm-partition-UUID>:<lvm-mount-name> root=/dev/mapper/<vg-name>-root resume=/dev/mapper/<vg-name>-swap quiet rw
 ```
-33. Exit the Arch installation.
+33. Install `intel-ucode` for Intel microcode updates.
+```
+sudo pacman -S intel-ucode
+```
+34. Exit the Arch installation.
 ```
 exit
 ```
-34. Unmount the drives.
+35. Unmount the drives.
 ```
 umount -R /mnt
 ```
-35. Reboot into the new Arch installation.
+36. Reboot into the new Arch installation.
 ```
 reboot
 ```

@@ -83,7 +83,7 @@ sudo pacman -S vim
 5. Install and setup `reflector` to setup the mirrors for a faster install.
 ```
 sudo pacman -S reflector
-reflector -c "<country-name>" -f 12 -l 12 --verbose --save /etc/pacman.d/mirrorlist
+reflector -c "<country-name>" -f 12 -l 5 --verbose --sort --save /etc/pacman.d/mirrorlist
 ```
 
 6. Install Arch. Make sure to include `base` and `base_devel` for basic packages, sudo for sudo use, as well as `dialog` and `wpa_supplicant` for WiFi access.
